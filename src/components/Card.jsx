@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./images/cd_logo.png";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 
@@ -7,7 +7,20 @@ import { Link } from "react-router-dom";
 function Card({ data }) {
 
 
+  const [islog, setislog] = useState(false);
 
+
+  useEffect(() => {
+    console.log("hello");
+    const user = JSON.parse(localStorage.getItem("users"));
+    
+    if (user == null) {
+      setislog(false);
+    } else {
+      setislog(true);
+    }
+
+  }, []);
   
 
   return (
@@ -48,7 +61,7 @@ function Card({ data }) {
 
         <div className="bg-[#2a323c] h-16 w-56 ml-4 rounded-md  rounded-b-xl py-2 px-12 ">
 
-          <Link to={`/coupon/${data.id}`} className="text-center px-3 py-2 rounded-xl bg-slate-700 hover:scale-105 duration-300 ">
+          <Link to={islog?`/coupon/${data.id}`:`/login`} className="text-center px-3 py-2 rounded-xl bg-slate-700 hover:scale-105 duration-300 ">
             <button  > Redeem Now </button>
           </Link>
 

@@ -47,8 +47,8 @@ const RedeemCard = ({ data }) => {
                             className="object-cover h-10 w-14  rounded-md"
                         />
                         <div>
-                            <h1 className="font-bold">Offer {data.offer} off</h1>
-                            <h1 className=" pl-2text-sm">on {data.brandname}</h1>
+                            <h1 className="font-bold">Offer{data.offer}off</h1>
+                            <h1 className=" pl-2text-sm">on{data.brandname}</h1>
                         </div>
                     </div>
                     <hr className='m-2' />

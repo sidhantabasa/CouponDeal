@@ -6,20 +6,20 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 const Header = () => {
-  const [show, setshow] = useState(false);
+  const [users, setusers] = useState([]);
   const [islog, setislog] = useState(false);
 
 
   useEffect(() => {
     console.log("hello");
     const user = JSON.parse(localStorage.getItem("users"));
-    
+
     if (user == null) {
       setislog(false);
     } else {
       setislog(true);
     }
-
+    setusers(user)
   }, []);
 
 
@@ -34,12 +34,12 @@ const Header = () => {
 
   const logout = () => {
     localStorage.clear("users");
-     window.location.reload();
-    
+    window.location.reload();
+
   };
 
 
-  
+
 
 
   // const clickhandle = () => {
@@ -78,7 +78,7 @@ const Header = () => {
           >
             Coupon
           </NavLink>
-          <NavLink
+          {islog ? <NavLink
             to="/uploadCoupon"
             className={({ isActive }) =>
               isActive
@@ -87,7 +87,16 @@ const Header = () => {
             }
           >
             Sell Coupon
-          </NavLink>
+          </NavLink> : <NavLink
+            to="/signup"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white text-lg font-bold"
+                : "text-white hover:text-gray-400"
+            }
+          >
+            Sell Coupon
+          </NavLink>}
           <NavLink
             to="/contact"
             className={({ isActive }) =>
@@ -101,14 +110,14 @@ const Header = () => {
         </div>
         <div className="md:flex hidden gap-x-2 font-semibold p-4">
           {islog ? (
-        <button 
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-            
-             className="m-2">
+            <button
+              id="basic-button"
+              aria-controls={open ? 'basic-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+              onClick={handleClick}
+
+              className="m-2">
               <i className="fas fa-user"></i>
             </button>
           ) : (
@@ -120,44 +129,44 @@ const Header = () => {
         </div>
         <Menu
 
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'basic-button',
+          }}
 
-        className=""
-        
+          className=""
+
         >
 
-<MenuItem className="w-56 rounded-lg bg-black text-white flex flex-col items-center p-4">
-        <img
-          src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg"
-          alt="user"
-          className="h-10 w-10 rounded-full bg-white mb-2"
-        />
-        <h1 className="text-center">user name</h1>
-        <h2 className="text-center">user_mail</h2>
-        <hr className="w-full my-2" />
-        <button className="text-md font-medium mb-2">Manage Profile</button>
+          {users ? <MenuItem className="w-56 rounded-lg bg-black text-white flex flex-col items-center p-4">
+            <img
+              src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg"
+              alt="user"
+              className="h-10 w-10 rounded-full bg-white mb-2"
+            />
+            <h1 className="text-center">{users.name}</h1>
+            <h2 className="text-center">{users.email}</h2>
+            <hr className="w-full my-2" />
+            <button className="text-md font-medium mb-2">Manage Profile</button>
 
-        <Link
-           to="/"
-          onClick={logout} 
-          className="bg-red-600 text-md font-bold px-4 mt-4 py-1 rounded-lg hover:bg-red-700"
-        >
-          Logout
-        </Link>
-     
-      </MenuItem>
-       
+            <Link
+              to="/"
+              onClick={logout}
+              className="bg-red-600 text-md font-bold px-4 mt-4 py-1 rounded-lg hover:bg-red-700"
+            >
+              Logout
+            </Link>
+
+          </MenuItem> : null}
+
         </Menu>
-        
+
       </nav>
-      
-      
+
+
     </header>
   );
 };
