@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import couponCategories from "../resources/CouponCategory";
 import { useNavigate } from "react-router-dom";
 import myContext from "../context/myContext";
@@ -6,6 +6,7 @@ import { Timestamp, addDoc, collection } from "firebase/firestore";
 import toast from "react-hot-toast";
 import { fireDb } from "../firebase";
 import Loader from "./Loader";
+import Signup from "./Signup.jsx"
 
 const Sellpage = () => {
   const context = useContext(myContext);
@@ -63,14 +64,31 @@ const Sellpage = () => {
   const [categoryName, setcetagoryName] = useState("Electronics"); //for all catGORY
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [para, setpara] = useState(false);
+  const [islog, setislog] = useState(false);
+
+
+  useEffect(() => {
+    console.log("hello");
+    const user = JSON.parse(localStorage.getItem("users"));
+
+    if (user == null) {
+      setislog(false);
+    } else {
+      setislog(true);
+    }
+    
+  }, []);
+
 
   const Brands = CouponCategories[categoryName];
 
+ return (
   
 
-  return (
-    <div>
-      <div className="bg-[#181e24] pt-24 flex items-center justify-center min-h-screen ">
+
+  
+    <>
+     {islog? <div className="bg-[#181e24] pt-24 flex items-center justify-center min-h-screen ">
       {loading && <Loader/>}
         <form onSubmit={addCouponFunction} className="bg-gradient-to-tl from-cyan-500 to-green-500  h-full max-w-96 p-6 rounded-lg shadow-inner-outer">
           <h1 className="flex font-bold text-white  text-2xl drop-shadow-lg justify-center p-4">
@@ -216,9 +234,12 @@ const Sellpage = () => {
             Upload
           </button>
         </form>
-      </div>
-    </div>
+      </div>: <div><Signup/></div>
+          }
+    </>
   );
+
+ 
 };
 
 export default Sellpage;
