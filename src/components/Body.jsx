@@ -1,13 +1,12 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import m1 from "./images/1.png";
-import m2 from "./images/2.png";
+import m1 from "./images/m1.png";
+import m2 from "./images/m2.png";
 import s1 from "./images/1.png";
 import s2 from "./images/2.png";
 import s3 from "./images/3.png";
 import slogan from "./images/tagline.png";
 import { Link } from "react-router-dom";
-
 
 // import Card from "./Card";
 // import ScrollToTop from "./ScrollToTop";
@@ -18,7 +17,7 @@ const Body = () => {
 
     <div className="bg-[#181e24]  overflow-x-hidden font-custom">
       <body>
-      <div className="h-10"></div>
+        <div className="h-10"></div>
         <div className=" w-full h-[90vh] flex lg:flex-row flex-col p-2 mt-20  items-center justify-center">
           <div className=" lg:w-1/2 w-full mt-20 lg:mt-0 flex items-center justify-center lg:border-r-2 p-1">
             <img src={slogan} alt="slogan" className=" w-full h-full " />
@@ -29,10 +28,9 @@ const Body = () => {
               CouponDeal
             </span>{" "}
             <span className="md:block hidden">
-            is a platform where you can sell your unused coupons and purchase
-            useful discounts according to your needs at reasonable prices.
+              is a platform where you can sell your unused coupons and purchase
+              useful discounts according to your needs at reasonable prices.
             </span>
-           
           </p>
         </div>
 
@@ -53,13 +51,13 @@ const Body = () => {
             ABOUT COUPONDEAL{" "}
           </h1>
 
-          <p className="md:px-40 px-24 md:pl-44 text-white mt-4  py-6 mb-9 ">
-            Welcome to CouponDeal , your ultimate destination for the best
-            e-coupon and deals online ! Our platform is dedicated to helping to
+          <p className="md:px-40 px-24 md:pl-44 text-white mt-4 text-center md:text-left  py-6 mb-9 ">
+            Welcome to CouponDeal, your ultimate destination for the best
+            e-coupon and deals online! Our platform is dedicated to helping to
             you to buy or sell yours coupons whether you're looking for discount
-            on fashion , electronics , groceries or travel , we have a wide
-            range of exclusive offer to cater to your need . Join our community
-            , explore , save and enjoy !
+            on fashion, electronics, groceries or travel, we have a wide range
+            of exclusive offer to cater to your need. Join our community,
+            explore, save and enjoy!
           </p>
 
           <h2 className="text-center font-bold text-3xl mt-3 box-shadoq-lg  text-white">
@@ -135,15 +133,14 @@ const Body = () => {
             HOW ITS WORKS
           </h2>
           <div className="overflow-x-auto h-[650px] scrollbar-hide mb-24 md:flex hidden ">
-  <img src={s1} alt="cs" />
-  <img src={s2} alt="cs" />
-  <img src={s3} alt="cs" />
-</div>
+            <img src={s1} alt="cs" />
+            <img src={s2} alt="cs" />
+            <img src={s3} alt="cs" />
+          </div>
 
-          <div className=" overflow-y-auto h-auto scrollbar-hide mb-24 md:hidden block ">
+          <div className=" overflow-y-auto  scrollbar-hide mb-24 md:hidden block ">
             <img src={m1} alt="cs" />
             <img src={m2} alt="cs" />
-            
           </div>
           <div className="hidden md:block">
             <h2 className="text-center font-bold text-4xl tracking-wide mb-10 text-white ">
@@ -322,7 +319,7 @@ const Body = () => {
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3 md:gap-24 gap-y-8 py-8 md:py-16 items-center justify-center px-16 ">
-            <div class="p-6 md:p-10 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 h-auto md:h-72  bg-[#2a323c] text-white">
+            <div class="p-6 md:p-10 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 h-auto md:h-72 hover:scale-105 duration-1000 bg-[#2a323c] text-white">
               <img
                 src="https://avatars.githubusercontent.com/u/112327515?v=4"
                 alt="sid"
@@ -331,21 +328,21 @@ const Body = () => {
               <h3 class="text-center text-lg md:text-xl font-bold">
                 SIDHANTA BASA
               </h3>
-              <p class="text-center">Frontend Developer</p>
+              <p class="text-center">React Developer, Managing Database </p>
               <div class="flex gap-2 md:gap-4">
-              <Link to='https://www.instagram.com/sidhantabasa/'>
+                <Link to="https://www.instagram.com/sidhantabasa/">
                   <i class="fab fa-instagram"></i>
                 </Link>
-                <Link to='https://github.com/sidhantabasa/'>
+                <Link to="https://github.com/sidhantabasa/">
                   <i class="fab fa-github"></i>
                 </Link>
-                <Link to='https://www.linkedin.com/in/sidhanta-basa-79587724a/'>
+                <Link to="https://www.linkedin.com/in/sidhanta-basa-79587724a/">
                   <i class="fab fa-linkedin"></i>
                 </Link>
               </div>
             </div>
 
-            <div class="p-6 md:p-10 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
+            <div class="p-6 md:p-10 flex flex-col hover:scale-105 duration-1000 items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
               <img
                 src="https://avatars.githubusercontent.com/u/112267835?v=4"
                 alt="sid"
@@ -354,21 +351,23 @@ const Body = () => {
               <h3 class="text-center text-lg md:text-xl font-bold">
                 Umesh Mahato
               </h3>
-              <p class="text-center">React Developer</p>
+              <p class="text-center">
+                React Developer, Database Connectivity, Backend Development
+              </p>
               <div class="flex gap-2 md:gap-4">
-                <Link to='https://www.instagram.com/umeshmahato28/'>
+                <Link to="https://www.instagram.com/umeshmahato28/">
                   <i class="fab fa-instagram"></i>
                 </Link>
-                <Link to='https://github.com/umeshmahato28/'>
+                <Link to="https://github.com/umeshmahato28/">
                   <i class="fab fa-github"></i>
                 </Link>
-                <Link to='https://www.linkedin.com/in/umeshmahato28/'>
+                <Link to="https://www.linkedin.com/in/umeshmahato28/">
                   <i class="fab fa-linkedin"></i>
                 </Link>
               </div>
             </div>
 
-            <div class="p-6 md:p-10 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
+            <div class="p-6 md:p-10 hover:scale-105 duration-700 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
               <img
                 src="https://media.licdn.com/dms/image/D5603AQHx7M2bUE34Ng/profile-displayphoto-shrink_800_800/0/1693066878804?e=1724889600&v=beta&t=3WGO9b4mWSn1t-k1iKs8iBv55EKApAlC0s-VjfnrILE"
                 alt="baishnavi"
@@ -377,15 +376,15 @@ const Body = () => {
               <h3 class="text-center text-lg md:text-xl font-bold">
                 Baishnavi
               </h3>
-              <p class="text-center">Frontend Developer</p>
+              <p class="text-center">Frontend Developer, Content Writer</p>
               <div class="flex gap-2 md:gap-4">
-              <Link to='https://www.instagram.com/umeshmahato28/'>
+                <Link to="https://www.instagram.com/k_mishra090?igsh=MWt1MmpvemNobGltNg==">
                   <i class="fab fa-instagram"></i>
                 </Link>
-                <Link to='https://github.com/umeshmahato28/'>
+                <Link to="https://github.com/">
                   <i class="fab fa-github"></i>
                 </Link>
-                <Link to='https://www.linkedin.com/in/baishnavi-75a421257/'>
+                <Link to="https://www.linkedin.com/in/baishnavi-75a421257/">
                   <i class="fab fa-linkedin"></i>
                 </Link>
               </div>

@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useFormik } from "formik";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDb } from "../firebase";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import myContext from "../context/myContext";
 import toast from "react-hot-toast";
 import Loader from "./Loader";
@@ -15,7 +15,7 @@ const initialValues = {
 
 const Login = () => {
   const { loading, setLoading } = useContext(myContext);
-  const navigate = useNavigate();
+  
 
   const formik = useFormik({
     initialValues,

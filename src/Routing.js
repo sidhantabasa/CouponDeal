@@ -11,23 +11,22 @@ import FAQ from "./components/FAQ";
 import PayPage from "./components/PayPage";
 
 
+
 const Routing = () => {
   return (
     <MyContextProvider>
+      <Routes>
+        <Route exact path="/" element={<Body />} />
+        <Route exact path="/signup" element={<Signup />}></Route>
+        <Route exact path="/uploadCoupon" element={<Sellpage />}></Route>
+        <Route exact path="/login" element={<Login />}></Route>
+        <Route exact path="/cardList" element={<Cardlist />}></Route>
+        <Route exact path="/*" element={<Error />}></Route>
+        <Route exact path="/contact" element={<Contact />}></Route>
+        <Route exact path="/faq" element={<FAQ />}></Route>
+        <Route exact path="/pay/:id" element={<PayPage />}></Route>
+      </Routes>
 
-    <Routes>
-      <Route exact path="/" element={<Body />}/>
-      <Route exact path="/signup" element={<Signup />}></Route>
-      <Route exact path="/uploadCoupon" element={<Sellpage />}></Route>
-      <Route exact path="/login" element={<Login />}></Route>
-      <Route exact path="/cardList" element={<Cardlist />}></Route>
-      <Route exact path="/*" element={<Error />}></Route>
-      <Route exact path="/contact" element={<Contact />}></Route>
-      <Route exact path="/faq" element={<FAQ />}></Route>
-      <Route exact path="/coupon/:id" element={<PayPage/>}></Route>
-
-      
-    </Routes>
     </MyContextProvider>
   );
 };

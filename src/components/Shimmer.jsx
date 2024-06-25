@@ -3,7 +3,7 @@ import React from 'react';
 
 function Shimmer() {
   return (
-    <div className="bg-[#181e24] h-80 w-64 items-center ">
+    <div className=" h-80 w-64 items-center ">
       <div className="bg-[#2a323c] p-2 pl-5 text-white w-56 mx-4 rounded-md animate-pulse duration-200  rounded-t-xl">
         <div className="flex mt-5 space-x-4">
           <div className="h-10 w-14 bg-gray-700 rounded-md shimmer"></div>

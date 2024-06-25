@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import logo from "./images/cd_logo.png";
-import { collection, onSnapshot, query, where } from "firebase/firestore";
-
 import { Link } from "react-router-dom";
 
 function Card({ data }) {
@@ -25,7 +23,7 @@ function Card({ data }) {
 
   return (
     <>
-      <div className="bg-[#181e24] h-80 w-64  items-center  ">
+      <div className=" items-center  ">
         <div className="bg-[#2a323c] p-2 pl-5 text-white   w-56 mx-4 rounded-md rounded-t-xl ">
           <div className="flex mt-5 ">
             <img
@@ -61,7 +59,7 @@ function Card({ data }) {
 
         <div className="bg-[#2a323c] h-16 w-56 ml-4 rounded-md  rounded-b-xl py-2 px-12 ">
 
-          <Link to={islog?`/coupon/${data.id}`:`/login`} className="text-center px-3 py-2 rounded-xl bg-slate-700 hover:scale-105 duration-300 ">
+          <Link to={islog?`/pay/${data.id}`:`/login`} className="text-center px-3 py-2 rounded-xl bg-slate-700 hover:scale-105 duration-300 ">
             <button  > Redeem Now </button>
           </Link>
 
