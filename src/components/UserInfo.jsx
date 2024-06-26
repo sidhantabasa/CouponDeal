@@ -1,17 +1,16 @@
 import { collection, getDocs } from 'firebase/firestore';
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { fireDb } from '../firebase';
-import myContext from '../context/myContext';
 import UserCard from './UserCard';
 import removeItem from './removeItem';
 
 const UserInfo = () => {
-    const { loading, setLoading } = useContext(myContext);
+    
     const [Data, setData] = useState([]);
     const [users, setUsers] = useState("kkk");
 
     useEffect(() => {
-        setLoading(true);
+       
 
         const fetchData = async () => {
             try {
@@ -25,7 +24,7 @@ const UserInfo = () => {
             } catch (error) {
                 console.error('Error fetching data: ', error);
             } finally {
-                setLoading(false);
+               console.log("final");
             }
         };
 

@@ -3,7 +3,6 @@ import logo from "./images/cd_logo.png";
 import { Link, NavLink } from "react-router-dom";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { IoMenu } from "react-icons/io5";
 import Dropbox from "./Dropbox.jsx";
 
 const Header = () => {

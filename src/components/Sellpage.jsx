@@ -85,7 +85,7 @@ const Sellpage = () => {
     
     setCoupon((prevCoupon) => ({ ...prevCoupon, uploadBy: user.uid }));
     console.log(coupon.uploadBy);
-  },[]);
+  },[coupon.uploadBy]);
 
   
 
