@@ -78,7 +78,7 @@ const Header = () => {
                 : "text-white hover:text-gray-400"
             }
           >
-            Coupon
+            Coupons
           </NavLink>
           {islog ? (
             <NavLink
