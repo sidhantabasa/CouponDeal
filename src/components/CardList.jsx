@@ -190,7 +190,7 @@ const Cardlist = () => {
             </div>
           </div>
 
-          <div className="flex flex-col pt-8 items-center justify-center md:grid md:grid-cols-3  gap-6">
+          <div className="flex flex-col pt-8 items-center justify-center md:grid md:grid-cols-3 lg:grid-cols-4  gap-6">
             {loading&& (
               <>
                 <Shimmer />
