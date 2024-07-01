@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mb-4 md:mb-0  text-center ">
+          <div className="mb-4 md:mb-0   text-center ">
             <Link>
               {" "}
               <h1 className="hover:cursor-pointer mb-2 md:mb-0">
