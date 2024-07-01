@@ -3,7 +3,7 @@ import React from "react";
 
 const ShimmerRedeem = () => {
   return (
-    <div className="min-h-screen bg-[#181e24] flex justify-center items-center">
+    <div className="min-h-screen  bg-[#181e24] flex justify-center items-center">
       <div className="bg-[#2a323c] relative md:h-10/12 md:w-[80%] md:px-40 md:justify-center p-20 h-1/2 w-full flex md:flex-row flex-col py-14 text-white rounded-md">
         <div className="md:mx-10 md:w-1/2 w-full ml-8 md:mr-48 flex items-start animate-pulse justify-center flex-col">
           <div className="flex mt-5 h-12">

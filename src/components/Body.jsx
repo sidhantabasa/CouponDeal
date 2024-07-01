@@ -367,7 +367,7 @@ const Body = () => {
               </div>
             </div>
 
-            <div class="p-6 md:p-10 hover:scale-105 duration-700 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
+            <div class="p-6 md:p-10  hover:scale-105 duration-700 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
               <img
                 src="https://media.licdn.com/dms/image/D5603AQHx7M2bUE34Ng/profile-displayphoto-shrink_800_800/0/1693066878804?e=1724889600&v=beta&t=3WGO9b4mWSn1t-k1iKs8iBv55EKApAlC0s-VjfnrILE"
                 alt="baishnavi"

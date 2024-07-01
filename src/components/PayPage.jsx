@@ -37,7 +37,7 @@ const PayPage = () => {
   const coupon = Data.filter((coupon) => id === coupon.id);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       {loading && <ShimmerRedeem />}
       {!loading && show && coupon.length > 0 && <RedeemCard data={coupon[0]} />}
     </div>

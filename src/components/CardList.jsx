@@ -41,7 +41,7 @@ const Cardlist = () => {
   console.log(Brands);
   return (
     <>
-      <div className="bg-[#181e24] w-full min-h-screen mt-24 text-white flex flex-col lg:flex-row">
+      <div className="bg-[#181e24] w-full min-h-screen  mt-24 text-white flex flex-col lg:flex-row">
         <div className="w-full flex flex-col items-center justify-start lg:w-2/12 lg:mr-3 mt-2">
           <h1 className="text-center mt-3 w-full">Filter</h1>
           <select className="bg-[#2a323c] rounded-md mx-8 my-3 px-2 pb-2 text-center " value={categoryName} onChange={(e) => { setcetagoryName(e.target.value); setisDisable(false); setbrandname(""); }} defaultValue="" >
