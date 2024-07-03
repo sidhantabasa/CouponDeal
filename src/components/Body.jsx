@@ -39,12 +39,12 @@ const Body = () => {
         {/* Main div */}
         <div className="bg-[#181e24] w-full">
           {/* Recently Uploaded coupons section */}
-          <div>
+          {/* <div>
             <h1 className="text-center mt-8 font-extrabold text-3xl p-2 bg-[#181e24] shadow-xl text-white">
               RECENT COUPONS{" "}
             </h1>
             <div className="bg-[#181e24] h-auto m-8 max-w-xl"></div>
-          </div>
+          </div> */}
           {/* Recently Uploaded coupons section ends */}
 
           <h1 className="text-center font-extrabold text-4xl mt-2 p-1 shadow-xl  text-white">
@@ -367,7 +367,7 @@ const Body = () => {
               </div>
             </div>
 
-            <div class="p-6 md:p-10  hover:scale-105 duration-700 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
+            <div class="p-6 md:p-10 hover:scale-105 duration-700 flex flex-col items-center justify-center rounded-lg shadow-lg gap-2 md:gap-4 bg-[#2a323c] h-auto md:h-72  text-white">
               <img
                 src="https://media.licdn.com/dms/image/D5603AQHx7M2bUE34Ng/profile-displayphoto-shrink_800_800/0/1693066878804?e=1724889600&v=beta&t=3WGO9b4mWSn1t-k1iKs8iBv55EKApAlC0s-VjfnrILE"
                 alt="baishnavi"

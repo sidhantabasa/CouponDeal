@@ -59,51 +59,125 @@ const Header = () => {
           </div>
         </Link>
         <div className="md:flex justify-between items-center gap-x-6 text-md p-2 hidden">
-          <NavLink to="/" exact className={({ isActive }) => isActive   ? "text-white text-lg font-bold"  : "text-white hover:text-gray-400" } >
+          <NavLink
+            to="/"
+            exact
+            className={({ isActive }) =>
+              isActive
+                ? "text-white text-lg font-bold"
+                : "text-white hover:text-gray-400"
+            }
+          >
             Home
           </NavLink>
-          <NavLink to="/cardList"
-            className={({ isActive }) =>  isActive? "text-white text-lg font-bold": "text-white hover:text-gray-400"}>
+          <NavLink
+            to="/cardList"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white text-lg font-bold"
+                : "text-white hover:text-gray-400"
+            }
+          >
             Coupons
           </NavLink>
-          {islog ? ( <NavLink to="/uploadCoupon" className={({ isActive }) => isActive ? "text-white text-lg font-bold"   : "text-white hover:text-gray-400"}>
+          {islog ? (
+            <NavLink
+              to="/uploadCoupon"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white text-lg font-bold"
+                  : "text-white hover:text-gray-400"
+              }
+            >
               Sell Coupon
             </NavLink>
-          ) : ( <NavLink to="/login" className={({ isActive }) => isActive ? "text-white text-lg font-bold" : "text-white hover:text-gray-400" } >
+          ) : (
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white text-lg font-bold"
+                  : "text-white hover:text-gray-400"
+              }
+            >
               Sell Coupon
-            </NavLink>)}
-          <NavLink to="/contact"
+            </NavLink>
+          )}
+          <NavLink
+            to="/contact"
             className={({ isActive }) =>
-              isActive ? "text-white text-lg font-bold"  : "text-white hover:text-gray-400"} >
+              isActive
+                ? "text-white text-lg font-bold"
+                : "text-white hover:text-gray-400"
+            }
+          >
             Contact
           </NavLink>
         </div>
-        <div className="flex justify-end md:gap-x-2 md:p-4">
-          {islog ? (<button id="basic-button" aria-controls={open ? "basic-menu" : undefined} aria-haspopup="true" aria-expanded={open ? "true" : undefined} onClick={handleClick} className="m-2">
-              <i className="fas fa-user"></i>
-            </button> ) : (<Link to="/login" className="bg-blue-500 p-1 px-2 mr-4 rounded-md">Login </Link> )}
-        </div>
-        <div ref={dropboxRef}>
-        <button type="button" className="md:hidden w-8 h-10 mr-3 scale-150" id="options-menu" onClick={toggleDropbox} >
-          <i class="fas fa-bars"></i>
-        </button>
-          {dropboxOpen && <Dropbox />}
-        </div>
-        <Menu id="basic-menu" anchorEl={anchorEl}  open={open} onClose={handleClose} MenuListProps={{  "aria-labelledby": "basic-button",}}>
-          {users ? (
-            <MenuItem className="w-56 flex flex-col items-center">
-              <img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" alt="user" className="h-10 w-10 rounded-full mb-2"/>
-              <h1 className="text-center">{users.name}</h1>
-              <h2 className="text-center">{users.email}</h2>
-              <hr className="w-full my-2" />
-              <Link to="/user" className="text-md font-medium mb-2"> Manage Profile</Link>
-              <Link to="/"onClick={logout} className="bg-red-600 text-md font-bold px-4 mt-4 py-1 rounded-lg hover:bg-red-700">
-                Logout
+        <div className="flex items-center">
+          <div className="flex justify-end md:gap-x-2 md:p-4">
+            {islog ? (
+              <button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+                className="m-2"
+              >
+                <i className="fas fa-user"></i>
+              </button>
+            ) : (
+              <Link to="/login" className="bg-blue-500 p-1 px-2 rounded-md">
+                Login
               </Link>
-            </MenuItem>
-          ) : null}
-        </Menu>
+            )}
+          </div>
+          <div ref={dropboxRef}>
+            <button
+              type="button"
+              className="md:hidden w-8 h-10 m-3 scale-125"
+              id="options-menu"
+              onClick={toggleDropbox}
+            >
+              <i className="fas fa-bars"></i>
+            </button>
+            {dropboxOpen && <Dropbox />}
+          </div>
+        </div>
       </nav>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          "aria-labelledby": "basic-button",
+        }}
+      >
+        {users ? (
+          <MenuItem className="w-56 flex flex-col items-center">
+            <img
+              src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg"
+              alt="user"
+              className="h-10 w-10 rounded-full mb-2"
+            />
+            <h1 className="text-center">{users.name}</h1>
+            <h2 className="text-center">{users.email}</h2>
+            <hr className="w-full my-2" />
+            <Link to="/user" className="text-md font-medium mb-2">
+              Manage Profile
+            </Link>
+            <Link
+              to="/"
+              onClick={logout}
+              className="bg-red-600 text-md font-bold px-4 mt-4 py-1 rounded-lg hover:bg-red-700"
+            >
+              Logout
+            </Link>
+          </MenuItem>
+        ) : null}
+      </Menu>
     </header>
   );
 };

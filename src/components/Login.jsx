@@ -43,7 +43,8 @@ const Login = () => {
         });
         return () => unsubscribe();
       } catch (error) {
-        console.log(error);
+        console.log("this is error");
+        console.error("here is the error",error);
         setLoading(false);
         toast.error("Login Failed");
       }
