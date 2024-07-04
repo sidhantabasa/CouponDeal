@@ -40,6 +40,8 @@ const Header = () => {
   const logout = () => {
     localStorage.clear("users");
     window.location.reload();
+    window.location.href = '/'; 
+
   };
 
   const toggleDropbox = () => {

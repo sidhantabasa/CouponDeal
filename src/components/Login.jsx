@@ -15,7 +15,7 @@ const initialValues = {
 
 const Login = () => {
   const { loading, setLoading } = useContext(myContext);
-  
+
 
   const formik = useFormik({
     initialValues,
@@ -31,20 +31,22 @@ const Login = () => {
           collection(fireDb, "user"),
           where('uid', '==', users?.user?.uid)
         );
-      
+
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
           let user;
           querySnapshot.forEach((doc) => user = doc.data());
           localStorage.setItem("users", JSON.stringify(user));
-          
+
           toast.success("Login Successfully");
           setLoading(false);
+          // window.location.reload();
+
           window.location.href = '/'; 
         });
         return () => unsubscribe();
       } catch (error) {
         console.log("this is error");
-        console.error("here is the error",error);
+        console.error("here is the error", error);
         setLoading(false);
         toast.error("Login Failed");
       }

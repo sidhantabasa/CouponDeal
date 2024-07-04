@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import logo from "./images/cd_logo.png";
+import toast from "react-hot-toast";
+
 
 const RedeemCard = ({ data }) => {
   const [Ccode, setCcode] = useState("XXXXXXXXXX");
@@ -19,7 +21,8 @@ const RedeemCard = ({ data }) => {
         console.log("paymant id", paymentId);
         setCcode(data.code);
         setpayment(true);
-        alert("Payment Succesfull!!!");
+        toast.success("Transaction Successfull");
+
       },
       theme: {
         color: "#07a291db",
