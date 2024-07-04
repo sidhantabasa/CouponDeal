@@ -326,7 +326,7 @@ const Body = () => {
                 class="h-16 w-16 md:h-20 md:w-20 rounded-full"
               />
               <h3 class="text-center text-lg md:text-xl font-bold">
-                SIDHANTA BASA
+                Sidhanta Basa
               </h3>
               <p class="text-center">React Developer, Managing Database </p>
               <div class="flex gap-2 md:gap-4">
