@@ -15,7 +15,7 @@ const Body = () => {
   return (
     // Landing section
 
-    <div className="bg-[#181e24]   overflow-x-hidden font-custom">
+    <div className="bg-[#181e24]    overflow-x-hidden font-custom">
       <body>
         <div className="h-10"></div>
         <div className=" w-full h-[90vh] flex lg:flex-row flex-col p-2 mt-20  items-center justify-center">
