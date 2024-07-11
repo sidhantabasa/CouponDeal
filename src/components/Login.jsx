@@ -49,7 +49,6 @@ const Login = () => {
         console.error("here is the error", error);
         setLoading(false);
         toast.error("Login Failed");
-        
       }
     },
   });
