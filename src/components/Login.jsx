@@ -49,8 +49,10 @@ const Login = () => {
         console.error("here is the error", error);
         setLoading(false);
         toast.error("Login Failed");
+        
       }
     },
+
   });
 
   return (
@@ -58,7 +60,7 @@ const Login = () => {
       {loading && <Loader />}
       <form
         onSubmit={formik.handleSubmit}
-        className="bg-gradient-to-tl from-cyan-500 to-green-500 h-full max-w-96 p-6 rounded-lg shadow-inner-outer"
+        className="bg-gradient-to-tl  from-cyan-500 to-green-500 h-full max-w-96 p-6 rounded-lg shadow-inner-outer"
       >
         <h1 className="flex font-bold text-white text-2xl drop-shadow-lg justify-center p-4">
           LOGIN
