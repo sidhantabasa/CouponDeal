@@ -54,7 +54,7 @@ const Login = () => {
   });
 
   return (
-    <div className="bg-[#181e24] pt-24 flex items-center justify-center min-h-screen">
+    <div className="bg-[#181e24] pt-24  flex items-center justify-center min-h-screen">
       {loading && <Loader />}
       <form
         onSubmit={formik.handleSubmit}
