@@ -45,7 +45,6 @@ function Card({ data }) {
               <li>3. Minimum spend {data.minimumAmt}Rs.</li>
               <li>4. Validity {data.validity}</li>
             </ol>
-
           </div>
         </div>
 
