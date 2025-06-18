@@ -69,4 +69,4 @@ function Card({ data }) {
   );
 }
 
-export default Card;
+export default Card; 
